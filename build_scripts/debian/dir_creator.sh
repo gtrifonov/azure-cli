@@ -110,7 +110,7 @@ ${TAB}echo "\043!/usr/bin/env bash\n/opt/az/bin/python3 -Im azure.cli \"\044\100
 ${TAB}chmod 0755 debian/azure-cli/usr/bin/az
 ${TAB}mkdir -p debian/azure-cli/etc/bash_completion.d/
 ${TAB}cat ${completion_script} > debian/azure-cli/etc/bash_completion.d/azure-cli
-${TAB}dpkg-shlibdeps -v --warnings=7 -Tdebian/azure-cli.substvars -dDepends -edebian/azure-cli/opt/az/bin/python3 debian/azure-cli/opt/az/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+${TAB}dpkg-shlibdeps -v --warnings=7 -Tdebian/azure-cli.substvars -dDepends -edebian/azure-cli/opt/az/bin/python3 debian/azure-cli/opt/az/lib/python3.6/lib-dynload/_ssl.cpython-36m-arm-linux-gnueabihf.so
 
 
 override_dh_strip:
